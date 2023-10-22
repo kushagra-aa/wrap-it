@@ -16,6 +16,14 @@
       {
         "command": "wrap-it.quickWrap",
         "title": "Quick Wrap"
+      },
+      {
+        "command": "wrap-it.selectedWrap",
+        "title": "Selected Element Wrap"
+      },
+      {
+        "command": "wrap-it.fragmentWrap",
+        "title": "Wrap with React Fragment"
       }
     ],
     "keybindings": [
@@ -38,7 +46,7 @@
         "wrap-it.autoSelectTag": {
           "type": "boolean",
           "default": true,
-          "description": "Automatically select the opening tag after wrapping."
+          "description": "Automatically select the opening tag after wrapping.(only applies to quickWrap)"
         }
       }
     }

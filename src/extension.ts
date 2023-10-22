@@ -1,16 +1,25 @@
 import * as vscode from "vscode";
-import wrapTag from "./warpTag";
-import selectTags from "./selectTags";
-import { defaultTag, isAutoSelectTag } from "./getConfig";
-import { quickWrap } from "./commands";
+import { fragmentWrap, quickWrap, selectedWrap } from "./commands";
 
 export function activate(context: vscode.ExtensionContext) {
   let quickWrapDisposable = vscode.commands.registerCommand(
     "wrap-it.quickWrap",
     quickWrap
   );
+  let selectedWrapDisposable = vscode.commands.registerCommand(
+    "wrap-it.selectedWrap",
+    selectedWrap
+  );
+  let fragmentWrapDisposable = vscode.commands.registerCommand(
+    "wrap-it.fragmentWrap",
+    fragmentWrap
+  );
 
-  context.subscriptions.push(quickWrapDisposable);
+  context.subscriptions.push(
+    quickWrapDisposable,
+    selectedWrapDisposable,
+    fragmentWrapDisposable
+  );
 }
 
 export function deactivate() {}
