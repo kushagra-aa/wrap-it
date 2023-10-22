@@ -2,8 +2,7 @@
 
 All notable changes to the "wrap-it" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [Releases]
 
-## [Unreleased]
-
-- Initial release
+- [1.0.0] - 22-10-2023
+Initial Release

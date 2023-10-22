@@ -1,71 +1,70 @@
-# wrap-it README
+# Wrap It
 
-This is the README for your extension "wrap-it". After writing up a brief description, we recommend including the following sections.
+A simple extension to do the frustrating task of wrapping tags.
+Easily wrap code in your chosen HTML tags for enhanced markup.
 
-## Features
+To use, select one or many chunks of code and press **"Alt + W" ("Option + W" for Mac).**
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+[Download for Visual Studio Code](https://marketplace.visualstudio.com/items/kushagra-aa.wrap-it)
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use It
 
-\!\[feature X\]\(images/feature-x.png\)
+* Select one or more blocks of text or strings of text.
+* Press <kbd>Alt</kbd> + <kbd>W</kbd> or <kbd>Option</kbd> + <kbd>W</kbd> for Mac.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands
 
-## Requirements
+* Quick Wrap: For quickly running your favorite Wrap It command.
+* Default Wrap: Wrap the selection(s) in the default tag.
+* Selected Wrap: Input the tag you want the Selection(s) in.
+* Fragment Wrap: Especially for us React Developers, Wrap the Selection(s) in a React Fragment(`<></>`).
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Default Keybindings
 
-## Extension Settings
+* `wrap-it.quickWrap` : <kbd>Alt</kbd> + <kbd>W</kbd> or <kbd>Option</kbd> + <kbd>W</kbd>
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Settings
 
-For example:
+You can change the default behavior of wrap-it with the following settings.
 
-This extension contributes the following settings:
+To open VS Code settings, click the "gear" icon > then "Settings"
+or
+Press <kbd>Ctrl/Cmd</kbd>+<kbd>,</kbd>
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Available settings
 
-## Known Issues
+* `wrap-it.defaultCommand` -  The default Command that will execute for the quickWrap keybinding.
+  * defaultWrap
+  * selectedWrap
+  * fragmentWrap
+* `wrap-it.defaultTag` -  The default HTML tag to insert when using WrapIt.
+* `wrap-it.autoSelectTag` -  Automatically select the opening tag after wrapping.(only applies to defaultWrap)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Defaults
 
-## Release Notes
+ ```json
+ {
+    "wrap-it.defaultTag": "span",
+    "wrap-it.defaultCommand": "defaultWrap",
+    "wrap-it.autoSelectTag": true
+ }
+ ```
 
-Users appreciate release notes as you update your extension.
+## Contributing
 
-### 1.0.0
+Please create an issue on GitHub if you experience a bug.
+I also welcome pull requests.
 
-Initial release of ...
+Read [Contribution Guide](./contribution.md)
 
-### 1.0.1
+## Repository & Feedback
 
-Fixed issue #.
+Please report issues related to this extension on the repository page.
 
-### 1.1.0
+[GitHub Repository](https://github.com/kushagra-aa/wrap-it)
 
-Added features X, Y, and Z.
+## Developer Information
 
----
+Kushagra Agnihotri
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Please Visit [Here](https://kushagra-aa.vercel.app/) for additional information
