@@ -1,16 +1,36 @@
-import { window } from "vscode";
-import { defaultTag, isAutoSelectTag } from "./getConfig";
+import { window, workspace } from "vscode";
+import {
+  getDefaultCommand,
+  getDefaultTag,
+  getIsAutoSelectTag,
+} from "./getConfig";
 import wrapTag from "./warpTag";
 import selectTags from "./selectTags";
 
 export const quickWrap = async () => {
+  switch (getDefaultCommand()) {
+    case "defaultWrap":
+      await defaultWrap();
+      break;
+    case "selectedWrap":
+      await selectedWrap();
+      break;
+    case "fragmentWrap":
+      await fragmentWrap();
+      break;
+    default:
+      await defaultWrap();
+  }
+};
+
+export const defaultWrap = async () => {
   const editor = window.activeTextEditor;
   if (editor === null) {
     return;
   }
-  const tag = defaultTag || "span";
+  const tag = getDefaultTag() || "span";
   await wrapTag(editor, tag);
-  if (isAutoSelectTag) {
+  if (getIsAutoSelectTag()) {
     await selectTags(editor, tag);
   }
 };

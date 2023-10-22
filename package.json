@@ -18,12 +18,16 @@
         "title": "Quick Wrap"
       },
       {
+        "command": "wrap-it.defaultWrap",
+        "title": "Default Element Wrap"
+      },
+      {
         "command": "wrap-it.selectedWrap",
         "title": "Selected Element Wrap"
       },
       {
         "command": "wrap-it.fragmentWrap",
-        "title": "Wrap with React Fragment"
+        "title": "React Fragment Wrap"
       }
     ],
     "keybindings": [
@@ -38,6 +42,15 @@
       "type": "object",
       "title": "WrapIt configuration",
       "properties": {
+        "wrap-it.defaultCommand": {
+          "enum": [
+            "defaultWrap",
+            "selectedWrap",
+            "fragmentWrap"
+          ],
+          "default": "defaultWrap",
+          "description": "The default Command that will execute for the quickWrap keybinding."
+        },
         "wrap-it.defaultTag": {
           "type": "string",
           "default": "span",
