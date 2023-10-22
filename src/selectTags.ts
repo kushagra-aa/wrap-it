@@ -1,4 +1,5 @@
 import { Selection, TextEditor } from "vscode";
+import { selectTagFromPosition } from "./utils";
 
 const selectTags = async (editor: TextEditor | undefined, tag: string) => {
   const selections = editor?.selections;
@@ -9,17 +10,7 @@ const selectTags = async (editor: TextEditor | undefined, tag: string) => {
 
   await new Promise((resolve) => {
     selections.forEach((selection) => {
-      let startPosition = selection.start.character + 1;
-      let endPosition = startPosition + tag.length;
-
-      const newSelection = new Selection(
-        selection.start.line,
-        startPosition,
-        selection.start.line,
-        endPosition
-      );
-
-      toSelect.push(newSelection);
+      toSelect.push(selectTagFromPosition(selection.start, tag.length));
       resolve(null);
     });
 
