@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import wrapTag from "./warpTag";
+import selectTags from "./selectTags";
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
@@ -11,6 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
       const tag = "span";
       await wrapTag(editor, tag);
+      await selectTags(editor, tag);
     }
   );
 
