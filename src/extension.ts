@@ -1,22 +1,16 @@
 import * as vscode from "vscode";
 import wrapTag from "./warpTag";
 import selectTags from "./selectTags";
+import { defaultTag, isAutoSelectTag } from "./getConfig";
+import { quickWrap } from "./commands";
 
 export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand(
-    "wrap-it.helloWorld",
-    async () => {
-      const editor = vscode.window.activeTextEditor;
-      if (editor === null) {
-        return;
-      }
-      const tag = "span";
-      await wrapTag(editor, tag);
-      await selectTags(editor, tag);
-    }
+  let quickWrapDisposable = vscode.commands.registerCommand(
+    "wrap-it.quickWrap",
+    quickWrap
   );
 
-  context.subscriptions.push(disposable);
+  context.subscriptions.push(quickWrapDisposable);
 }
 
 export function deactivate() {}

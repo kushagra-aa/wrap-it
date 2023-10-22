@@ -14,18 +14,34 @@
   "contributes": {
     "commands": [
       {
-        "command": "wrap-it.helloWorld",
-        "title": "Hello World"
+        "command": "wrap-it.quickWrap",
+        "title": "Quick Wrap"
       }
     ],
     "keybindings": [
       {
-        "command": "wrap-it.helloWorld",
+        "command": "wrap-it.quickWrap",
         "key": "alt+w",
         "mac": "alt+w",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "WrapIt configuration",
+      "properties": {
+        "wrap-it.defaultTag": {
+          "type": "string",
+          "default": "span",
+          "description": "The default HTML tag to insert when using WrapIt."
+        },
+        "wrap-it.autoSelectTag": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically select the opening tag after wrapping."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
