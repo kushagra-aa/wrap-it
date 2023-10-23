@@ -3,6 +3,11 @@
   "displayName": "Wrap It",
   "publisher": "kushagra-aa",
   "description": "\"Wrap It\" - Easily wrap code in your chosen HTML tags for enhanced markup.",
+  "homepage": "https://github.com/kushagra-aa/wrap-it/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/kushagra-aa/wrap-it/issues",
+    "email": "kushagraagnihotri24@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kushagra-aa/wrap-it"
@@ -13,6 +18,18 @@
   },
   "categories": [
     "Other"
+  ],
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#263c39",
+    "theme": "dark"
+  },
+  "keywords": [
+    "wrap html",
+    "wrap code",
+    "wrap tags",
+    "wrap text",
+    "react fragment wrap"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",

@@ -7,6 +7,12 @@ To use, select one or many chunks of code and press **"Alt + W" ("Option + W" fo
 
 [Download for Visual Studio Code](https://marketplace.visualstudio.com/items/kushagra-aa.wrap-it)
 
+![Wrap It being better](assets/wrap-it.gif)
+
+No Wrap It: 4-5 steps.
+
+Wrap IT: 2 simple steps.
+
 ## How to Use It
 
 * Select one or more blocks of text or strings of text.
